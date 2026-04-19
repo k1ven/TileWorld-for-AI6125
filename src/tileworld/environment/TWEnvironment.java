@@ -110,10 +110,6 @@ public class TWEnvironment extends SimState implements Steppable {
         //Now we create some agents
         for (int i = 1; i <= 6; i++) {
             Int2D pos = this.generateRandomLocation();
-            // Switch this class name for comparisons:
-            // BaselineGreedyTWAgent, BroadcastGreedyTWAgent, RegionGreedyTWAgent,
-            // RoleSearchClaimTWAgent, GreedyTWAgent.
-            // GreedyTWAgent uses the current best phased-station strategy by default.
             createAgent(new GreedyTWAgent("agent" + i, pos.getX(), pos.getY(), this,
                     Parameters.defaultFuelLevel));
         }
